@@ -1,3 +1,8 @@
+//全局过滤器
+Vue.filter('money', function(value, type){
+	return '￥'+ value.toFixed(2) + type;
+})
+
 var vm = new Vue({
 	el: '#app',
 	data: {
@@ -84,9 +89,4 @@ var vm = new Vue({
 			this.delFlag = false;
 		}
 	}
-})
-
-//全局过滤器
-Vue.filter('money', function(value, type){
-	return '￥'+ value.toFixed(2) + type;
 })
